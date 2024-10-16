@@ -189,7 +189,7 @@ class App {
 
     // Add new object to workouts array
     this.#workouts.push(workout);
-    console.log(workout);
+    // console.log(workout);
 
     // Render workout on map as marker
     this._renderWorkoutMarker(workout);
@@ -274,12 +274,12 @@ class App {
 
   _moveToPopup(e) {
     const workoutEl = e.target.closest('.workout');
-    console.log(workoutEl);
+    // console.log(workoutEl);
 
     if (!workoutEl) return;
 
     const workoutId = this.#workouts.find(w => w.id === workoutEl.dataset.id);
-    console.log(workoutId);
+    // console.log(workoutId);
 
     this.#map.setView(workoutId.coords, this.#mapZoomLevel, {
       animation: true,
